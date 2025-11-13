@@ -1,0 +1,19 @@
+kind: CronJob
+apiVersion: batch/v1
+metadata:
+  name: demo-CronJob
+  namespace: nginx
+spec:
+  schedule: "*/5 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          name: demo-CronJob
+          labels:
+            app: demo-CronJob
+        spec:
+          containers:
+          - name: cronjob-containerport
+            image: busybox
+            command: ["sh","-c", "echo Hello world"]

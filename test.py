@@ -1,0 +1,1 @@
+print(This test file is for Kubernetes-related tests.)

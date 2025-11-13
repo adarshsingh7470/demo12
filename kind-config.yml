@@ -1,0 +1,14 @@
+
+
+## This is kind configuration file to create a kubernetes cluster with 1 control-plane node and 3 worker nodes.
+kind: cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+ - role: control-plane
+   image: kindest/node:v1.33.1
+ - role: worker
+   image: kindest/node:v1.33.1
+ - role: worker
+   image: kindest/node:v1.33.1
+ - role: worker
+   image: kindest/node:v1.33.1

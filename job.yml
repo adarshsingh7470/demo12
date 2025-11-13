@@ -1,0 +1,21 @@
+kind: Job
+apiVersion: batch/v1
+metadata:
+  name: demo-Job
+  namespace: nginx
+
+spec:
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      name: demo-Job
+      labels:
+        app: demo-Job
+
+    spec:
+      containers:
+      - name: job-containerport
+        image: busybox
+        command: ["sh", "-c", "echo hello World; sleep 30"]
+        restartPolicy: Nerver
