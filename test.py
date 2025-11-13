@@ -1,1 +1,1 @@
-print("This test file is for Kubernetes-related testsV2.")
+print("This test file is for Kubernetes-related testsV3.")
